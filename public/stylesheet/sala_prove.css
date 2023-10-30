@@ -1,0 +1,158 @@
+main{
+    color: black;
+    font-weight: bold;
+    margin: 40px auto -8px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.sala{
+    float: left;
+    text-align: justify;
+    font-size: 2.5rem;
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 0 8px;
+}
+.info{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%;
+    height: 300px;
+    padding-right: 15px;
+    overflow: scroll;
+}
+.orario{
+    display: inline-block;
+}
+.tariffa{
+    margin-left: 9.5vw;
+    display: inline-block;
+}
+.info p{
+    font-size: 2rem;
+    margin-left: 30px;
+}
+.info span{
+    color: #7da6fa;
+}
+.info span span{
+    color: #b9a11e;
+}
+.calenda{
+    color: white;
+    font-size: 3rem;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+iframe{
+    opacity: 0.89;
+}
+
+
+.container {
+    position: relative;
+}
+.redSlides,.blueSlides {
+    display: none;
+}
+.redSlides img,.blueSlides img{
+    height: 500px;
+    border-radius: 10px;
+    image-rendering: optimizeSpeed;
+    object-fit: cover;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+    font-size: 1.7rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.next {
+    left: 6%;
+}
+.blu .prev:hover,
+.blu .next:hover {
+    color: cornflowerblue;
+}
+.caption-container {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    height: 80px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.columnRed{
+    float: left;
+    width: 10%;
+}
+.columnBlue{
+    float: left;
+    width: 11.11%;
+}
+.columnRed img, .columnBlue img{
+    image-rendering: optimizeSpeed;
+}
+.demoR, .demoB{
+    opacity: 0.6;
+    height: 5rem;
+    object-fit: cover;
+}
+.active,
+.demoR:hover, .demoB:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+@media screen and (max-width: 1800px) {
+    .sala{
+        width: 100%;
+    }
+    .orario{
+        display: block;
+    }
+    .tariffa{
+        margin-left: 0;
+        display: block;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .sala{
+        font-size: 1.5rem;
+    }
+    .info{
+        font-size: 2rem;
+    }
+    .info p{
+        font-size: 1.52rem;
+    }
+    .calenda{
+        margin-top: 20px;
+        font-size: 2.5rem;
+    }
+    iframe{
+        height: 400px;
+    }
+
+    .redSlides img,.blueSlides img{
+        height: 320px;
+    }
+    .next {
+        left: 10%;
+    }
+    .demoR, .demoB{
+        height: 3.5rem;
+    }
+
+}

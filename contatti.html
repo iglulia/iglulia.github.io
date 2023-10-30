@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="public/stylesheet/style_bg.css" />
+    <link rel="stylesheet" href="public/stylesheet/contatti.css" />
+    <link rel="stylesheet" href="public/stylesheet/social.css" />
+    <link rel="stylesheet" href="public/stylesheet/navBar.css" />
+    <title>Contatti</title>
+</head>
+
+<body>
+    <div class="logo_top_brand">
+        <img src=" public/img/logo.gif" alt="logo" width="450px">
+    </div>
+
+
+    <ul class="nascondi">
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="contatti.html">AboutMe</a></li>
+    </ul>
+    <div class="visualizza">
+        <div id="nav" class="navBar">
+            <a class="chiudiNav" href="javascript:void(0)" onclick="chiudiMenu()">
+                <i class="fas fa-times"></i>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="contatti.html">AboutMe</a></li>
+                </ul>
+            </nav>
+        </div>
+        <span class="panino" onclick="apriMenu()">
+            <i class="fas fa-bars"></i>
+        </span>
+    </div>
+    <main>
+        <div class="container"
+            style="margin-top: 12rem; margin-bottom: 15rem; word-spacing: 0.5rem; word-wrap: break-word; width: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class=" text">
+                <h1>Giulia Garofalo</h1>
+                <h3>Illustratrice e Visual Designer</h3>
+                <p
+                    style="font-size: 1.2rem; line-height: 1.5rem; margin-top: 2rem; margin-bottom: 2rem; text-align: justify;">
+                    Ciao, io sono Giulia, illustratrice e visual designer freelance pugliese. Nel 2020, dopo aver
+                    conseguito la laurea in Graphic Design a Foggia (FO), ho lavorato nel settore occupandomi
+                    principalmente di brand e visual
+                    identity,
+                    progettazione di flayers, posters e web design.
+                    <br><br>Qualche mese più tardi ho scelto di portare avanti
+                    la mia passione per
+                    l'illustrazione e specializzarmi studiando a Milano, alla CFP Bauer. Da questa bellissima esperienza
+                    e dal modo in cui
+                    ne sono stata coinvolta ho scoperto un mondo che sento mio a tutti gli effetti. Al momento, lavoro
+                    come illustratrice
+                    freelance e collaboro con compagnie come Peanuts Digital e Blueorange design.
+                    <br><br>Nel tempo libero mi piace dedicarmi a progetti personali ed esprimermi attraverso l'arte,
+                    analogica
+                    e digitale. Amo il
+                    potere della comunicazione artistica e il modo in cui riesce, anche con pochi elementi, ad avere un
+                    impatto così forte
+                    su di noi. Mi piace imparare cose nuove, confrontarmi e lavorare in team.
+                </p>
+                <button class="btn-send-mail"> <a href="mailto:giuliagarofalo988gmail.com " target="_blank"><i
+                            class="fas fa-envelope"></i>
+                        Contattami</a></button>
+            </div>
+            <div class="photo">
+                <img src="public/img/contatto.jpg" alt="Io" width="550px" height="550px" style="border-radius: 50%;">
+            </div>
+        </div>
+    </main>
+    <style>
+        .footer {
+            background: rgba(0, 0, 0);
+
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+
+        .footer p {
+            color: #8a8a8a;
+        }
+
+        .footer h1,
+        .footer h2,
+        .footer h3,
+        .footer h4,
+        .footer h5,
+        .footer h6 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #8a8a8a;
+        }
+
+        .footer a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer .footer-content .footer-section {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .footer .footer-content .about h1 span {
+            color: #214677;
+        }
+
+        .footer .footer-content .about .contact span {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-content .about .socials a {
+            background: #fff;
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            margin: 0 10px 10px 0;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            transition: .3s;
+        }
+
+        .footer .footer-content .about .socials a:hover {
+            background: #214677;
+            color: #fff;
+        }
+
+        .footer .footer-content .links ul a {
+            display: block;
+            margin-bottom: 10px;
+            transition: .3s;
+        }
+
+        .footer .footer-content .links ul a:hover {
+            color: #214677;
+        }
+
+        .footer .footer-content .contact-form .text-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 0;
+            color: #8a8a8a;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .footer .footer-content .footer-section .contact-form .btn {
+            background: #214677;
+            color: #000000;
+            border: 0;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .footer .footer-bottom {
+            background: rgba(0, 0, 0, 0.5);
+            color: #000000;
+            font-size: 14px;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer .footer-bottom a {
+            color: #e8491d;
+        }
+
+        .footer .footer-bottom a:hover {
+            color: #020202;
+        }
+
+        @media screen and (max-width: 880px) {
+            .footer .footer-content .footer-section {
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width: 880px) {
+            .footer {
+                padding: 20px 0;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .footer .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <footer>
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <!-- gif -->
+
+                    <!--  <h1 class="logo-text"><span>Giulia</span>Garofalo</h1> -->
+                    <!-- <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.
+                        </p> -->
+                </div>
+                <div class="footer-section about links">
+
+                    <img src="public/img/Devil bianco.png" alt="logo" width="128px" height="128px"
+                        style="margin-left: 10rem; margin-bottom: 3.5rem;">
+
+                    <div class="contact" style="margin-left: 7rem; margin-bottom:1rem;">
+
+                        <span><i class="fas fa-envelope"></i> &nbsp; giuliagarofalo988gmail.com</span>
+                    </div>
+                    <br>
+                    <div class="socials" style="margin-left: 9.5rem; ">
+
+                        <a href="https://www.behance.net/giulja?tracking_source=search_projects%7Cgiulja"
+                            target="_blank"><i class="fab fa-behance"></i></a>
+                        <a href="https://www.instagram.com/iglulia/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/iglulia/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                    <!-- <h2>Quick Links</h2>
+                        <br>
+                        <ul>
+                            <a href="#">
+                                <li>Events</li>
+                            </a>
+                            <a href="#">
+                                <li>Team</li>
+                            </a>
+                            <a href="#">
+                                <li>Mentores</li>
+                            </a>
+                            <a href="#">
+                                <li>Gallery</li>
+                            </a>
+                            <a href="#">
+                                <li>Terms and Conditions</li>
+                            </a>
+                        </ul> -->
+                </div>
+                <div class="footer-section contact-form">
+                    <!-- <h2>Contact Me</h2>
+                    <br>
+                    <form action="index.html" method="post">
+                        <input type="email" name="email" class="text-input contact-input"
+                            placeholder="Your email address...">
+                        <textarea rows="4" name="message" class="text-input contact-input"
+                            placeholder="Your message..."></textarea>
+                        <button type="submit"
+                            style="background-color: #214677; color: #fff; border: 0; padding: 12px 20px; margin-bottom: 10px; cursor: pointer; width: 100%;">
+                            <i class="fas fa-envelope"></i>
+
+                        </button>
+                    </form> -->
+                </div>
+            </div>
+            <!--  <div class="footer-bottom">
+                    &copy; codingpoets.com | Designed by Giulia Garofalo
+                </div> -->
+        </div>
+    </footer>
+
+    <!--     <script type="text/javascript" src="../public/javascript/galleria.js"></script>-->
+    <script type="text/javascript" src="../public/javascript/navBar.js"></script>
+</body>
+
+</html>

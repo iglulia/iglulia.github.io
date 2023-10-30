@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-Regular.ttf') format('ttf'),
+        url('./Poppins/Poppins-Regular.ttf') format('ttf');
+    /* Aggiungi altre varianti del font se necessario */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    font-weight: bolder;
+    color: #de3636;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+}
+
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.logo {
+    background-image: url('../img/logo.png');
+    background-attachment: fixed;
+    background-size: 30rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.primo_piano {
+    background: url('../img/primo_piano_uova.png') center;
+    background-size: contain;
+    z-index: 2;
+}
+
+.home {
+    /* background: linear-gradient(
+            rgba(105, 211, 252, 0.25) 20%,
+            rgba(255, 0, 0, 0.25) 85%,
+            transparent 100%
+    ); EQUAL BUT WHITE GRADIENT */
+    background: whitesmoke;
+    background-size: contain;
+    transform: translateZ(0) scale(1);
+    z-index: 3;
+}
+
+.home h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 2.5rem;
+}
+
+p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.home ul {
+    font-size: 1rem;
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+}
+
+.storia {
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+.home ul li {
+    margin-left: 2.5rem;
+    list-style-type: none;
+    float: left;
+}
+
+.social {
+    position: absolute;
+    left: 2.5rem;
+    top: 2.5rem;
+}
+
+@media (max-width: 1476px) {
+
+    .primo_piano,
+    .home {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .logo {
+        background-size: 20rem;
+    }
+}
+
+::-webkit-scrollbar-button {
+    visibility: hidden;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
