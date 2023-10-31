@@ -2,18 +2,14 @@
     display: block;
 }
 
-.nascondi {
-    display: none;
-}
-
-.panino {
+/* .panino {
     color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
     top: 4%;
     right: 4%;
-}
+} */
 
 .navBar {
     height: 600px;
@@ -53,29 +49,19 @@ nav {
     right: 10%;
 }
 
-@media (min-width: 875px) {
-    .visualizza {
-        display: none;
-    }
+@media (min-width: 875px) {}
 
-    .nascondi {
-        display: block;
-    }
-}
-
-@media (max-width: 875px) {
-    .panino {
-        top: 2.5rem;
-        right: 10%;
-    }
-}
+@media (max-width: 875px) {}
 
 @media (max-height: 400px) {
-    .navBar {
-        height: 360px;
-    }
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 150px;
+        margin-left: 15px;
 
-    .navBar a {
-        font-size: 1.5rem;
     }
 }
