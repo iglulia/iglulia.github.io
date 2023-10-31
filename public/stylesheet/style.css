@@ -1,3 +1,4 @@
+/* set Poppins Dir as font dir */
 * {
     padding: 0;
     margin: 0;
@@ -6,8 +7,8 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('./Poppins/Poppins-Regular.ttf') format('ttf'),
-        url('./Poppins/Poppins-Regular.ttf') format('ttf');
+    src: url('Poppins/Poppins-SemiBold.ttf') format('ttf'),
+        url('Poppins/Poppins-SemiBoldItalic.ttf') format('ttf');
     /* Aggiungi altre varianti del font se necessario */
     font-weight: normal;
     font-style: normal;
@@ -15,130 +16,77 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: semibold;
 }
 
-html,
-body {
-    width: 100%;
-    color: #fff;
-    background-color: #000;
-    font-family: 'Poppins', sans-serif;
+body,
+html {
+    margin: 0;
+    background: white;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: repeat;
 }
 
-h2 {
-    font-family: 'Poppins', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-a:hover {
-    font-weight: bolder;
-    color: #de3636;
-}
-
-.wrapper {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 300px;
-}
-
-.parallax__group {
+.logo_top {
+    display: inline-flex;
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    left: 50%;
+    top: 1rem;
+    font-size: 2.5rem;
 }
 
-.parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.logo {
-    background-image: url('../img/logo.png');
-    background-attachment: fixed;
-    background-size: 30rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-.primo_piano {
-    background: url('../img/primo_piano_uova.png') center;
-    background-size: contain;
-    z-index: 2;
-}
-
-.home {
-    /* background: linear-gradient(
-            rgba(105, 211, 252, 0.25) 20%,
-            rgba(255, 0, 0, 0.25) 85%,
-            transparent 100%
-    ); EQUAL BUT WHITE GRADIENT */
-    background: whitesmoke;
-    background-size: contain;
-    transform: translateZ(0) scale(1);
-    z-index: 3;
-}
-
-.home h2 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    position: absolute;
+.logo_top_brand img {
+    display: inline-flex;
+    position: relative;
+    top: 1rem;
     left: 2.5rem;
-    top: 2.5rem;
+    width: 450px;
 }
 
-p {
+@media (max-width: 575px) {
+    .logo_top_brand img {
+        left: 0;
+        margin-left: 0;
+        width: 100%
+    }
+}
+
+.logo_top img {
+    margin: 0 1rem;
+}
+
+ul {
+    font-size: 1.4rem;
     font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.home ul {
-    font-size: 1rem;
     position: absolute;
     right: 2.5rem;
-    top: 2.5rem;
+    top: 4rem;
 }
 
-.storia {
-    background: black;
-    width: 100%;
-    height: 100%;
-}
-
-.home ul li {
+ul li {
     margin-left: 2.5rem;
     list-style-type: none;
     float: left;
 }
 
-.social {
-    position: absolute;
-    left: 2.5rem;
-    top: 2.5rem;
+a {
+    text-decoration: none;
+    color: #1d1b1b;
 }
 
-@media (max-width: 1476px) {
-
-    .primo_piano,
-    .home {
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
+a:hover {
+    color: #a19999bb;
 }
 
-@media (max-width: 900px) {
-    .logo {
-        background-size: 20rem;
-    }
+a.active {
+    color: #3981a6;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
 ::-webkit-scrollbar-button {
@@ -147,11 +95,6 @@ p {
 
 ::-webkit-scrollbar-corner {
     display: none;
-}
-
-/* width */
-::-webkit-scrollbar {
-    width: 8px;
 }
 
 /* Handle */
@@ -164,3 +107,16 @@ p {
 ::-webkit-scrollbar-thumb:hover {
     background: #888;
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+    background: #555;
+}
+
+
+
+@media (max-width: 575px) {}
+
+@media (max-width: 875px) {}
+
+@media (min-width: 875px) {}

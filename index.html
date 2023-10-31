@@ -9,19 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="public/stylesheet/Poppins/Poppins.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <link rel="stylesheet" href="public/stylesheet/style_bg.css" />
+    <link rel="stylesheet" href="public/stylesheet/style.css" />
     <link rel="stylesheet" href="public/stylesheet/galleria.css" />
-    <link rel="stylesheet" href="public/stylesheet/social.css" />
     <link rel="stylesheet" href="public/stylesheet/navBar.css" />
-    <title>Galleria</title>
+    <title>Iglulia</title>
 </head>
 
 <body>
 
     <div class="logo_top_brand">
-        <img src=" public/img/logo.gif" alt="logo" width="450px">
+        <img src=" public/img/logo.gif" alt="logo">
     </div>
 
     </div>
@@ -50,26 +53,10 @@
             </div>
         </div>
     </div> -->
-    <ul class="nascondi">
+    <ul class="navigation">
         <li><a href="index.html">Portfolio</a></li>
         <li><a href="contatti.html">AboutMe</a></li>
     </ul>
-    <div class="visualizza">
-        <div id="nav" class="navBar">
-            <a class="chiudiNav" href="javascript:void(0)" onclick="chiudiMenu()">
-                <i class="fas fa-times"></i>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Portfolio</a></li>
-                    <li><a href="contatti.html">AboutMe</a></li>
-                </ul>
-            </nav>
-        </div>
-        <span class="panino" onclick="apriMenu()">
-            <i class="fas fa-bars"></i>
-        </span>
-    </div>
     <main>
         <!-- follow the previus pattern -->
         <div class="festa">
@@ -77,19 +64,57 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <img id="modalImage" src="">
+                    <div id="caption"></div>
                 </div>
             </div>
             <script>
                 function openModal(element) {
+                    // if is a mobile device, open the image in a new tab
+                    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                    if (isMobile) {
+                        return;
+                    }
                     var modal = document.getElementById("myModal");
                     var modalImg = document.getElementById("modalImage");
                     var img = element.getElementsByTagName("img")[0];
                     modal.style.display = "block";
                     modalImg.src = img.src;
+                    modalImg.alt = img.alt;
+                    // show alt text as caption
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = modalImg.alt;
+                    modalImg.onmouseenter = function () {
+                        captionText.style.display = "block";
+                    }
+                    modalImg.onmouseleave = function () {
+                        captionText.style.display = "none";
+                    }
+                    captionText.classList.add("caption");
+                    //style: caption displayed over all image width with a transparent and a big text and incline of an angle
+                    captionText.style.display = "none";
+                    captionText.style.width = getComputedStyle(modalImg).width;
+                    captionText.style.textAlign = "center";
+                    captionText.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+                    captionText.style.fontSize = "2rem";
+                    captionText.style.padding = "10px";
+                    captionText.style.transform = "rotate(-10deg)";
+                    captionText.style.position = "absolute";
+                    captionText.style.top = "60%";
+                    captionText.style.left = "50%";
+                    captionText.style.transform = "translate(-50%, -50%)";
+                    captionText.style.color = "white";
+                    captionText.style.textShadow = "2px 2px 4px #000000";
+                    captionText.style.fontFamily = "Poppins";
+                    captionText.style.fontWeight = "bold";
+                    captionText.style.zIndex = "2";
                 }
 
                 var span = document.getElementsByClassName("close")[0];
                 span.onclick = function () {
+                    var modal = document.getElementById("myModal");
+                    modal.style.display = "none";
+                }
+                window.onload = function () {
                     var modal = document.getElementById("myModal");
                     modal.style.display = "none";
                 }
@@ -101,45 +126,45 @@
                 }
             </script>
             <div class="grid-container">
-                <div class="grid-item item1" onclick="openModal(this)"><img alt="" src="public/img/portfolio/2.jpg">
+                <div class="grid-item item1" onclick="openModal(this)"><img alt="2" src="public/img/portfolio/2.jpg">
                 </div>
-                <div class="grid-item item2" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item2" onclick="openModal(this)"><img alt="1984"
                         src="public/img/portfolio/1984 copia.jpg">
                 </div>
-                <div class="grid-item item3" onclick="openModal(this)"><img alt="" src="public/img/portfolio/aim.jpg">
+                <div class="grid-item item3" onclick="openModal(this)"><img alt="aim"
+                        src="public/img/portfolio/aim.jpg">
                 </div>
-                <div class="grid-item item4" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item4" onclick="openModal(this)"><img alt="Bigger"
                         src="public/img/portfolio/Bigger.jpg">
                 </div>
-                <div class="grid-item item5" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item5" onclick="openModal(this)"><img alt="Concorso Inchiostro Festival 23"
                         src="public/img/portfolio/Concorso-Inchiostro-festival-23.jpg">
                 </div>
-                <div class="grid-item item6" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item6" onclick="openModal(this)"><img alt="fragola"
                         src="public/img/portfolio/fragola.jpg">
                 </div>
-                <div class="grid-item item7" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item7" onclick="openModal(this)"><img alt="NFT"
                         src="public/img/portfolio/Giulia Garofalo NFT.jpg">
                 </div>
-                <div class="grid-item item8" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item8" onclick="openModal(this)"><img alt="I thoughts"
                         src="public/img/portfolio/I thoughts copia.jpg">
                 </div>
-                <div class="grid-item item9" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item9" onclick="openModal(this)"><img alt="Pattern"
                         src="public/img/portfolio/Patternn.jpg">
                 </div>
-                <div class="grid-item item9" onclick="openModal(this)"><img alt=""
+                <div class="grid-item item9" onclick="openModal(this)"><img alt="scimmions"
                         src="public/img/portfolio/scimmions.jpg">
                 </div>
             </div>
-        </div>
-        <div class="festa">
-            <div class="grid-container">
-                <div class="grid-item item10" onclick="openModal(this)"><img alt=""
-                        src="public/img/portfolio/Giulia_Garofalo_Barone_Rampante_2.jpg"></div>
-                <div class="grid-item item11" onclick="openModal(this)"><img alt=""
-                        src="public/img/portfolio/tartaruga.jpg"></div>
-                <div class="grid-item item12" onclick="openModal(this)"><img alt=""
-                        src="public/img/portfolio/Lillo.jpg"></div>
-                <!-- <div class="grid-item item13" onclick="openModal(this)"><img alt=""
+            <div class="festa">
+                <div class="grid-container">
+                    <div class="grid-item item10" onclick="openModal(this)"><img alt="Giulia Garofalo Barone Rampante 2"
+                            src="public/img/portfolio/Giulia_Garofalo_Barone_Rampante_2.jpg"></div>
+                    <div class="grid-item item11" onclick="openModal(this)"><img alt="tartaruga"
+                            src="public/img/portfolio/tartaruga.jpg"></div>
+                    <div class="grid-item item12" onclick="openModal(this)"><img alt="Lillo"
+                            src="public/img/portfolio/Lillo.jpg"></div>
+                    <!-- <div class="grid-item item13" onclick="openModal(this)"><img alt=""
                         src="public/img/portfolio/test.webp"></div>
                 <div class="grid-item item14" onclick="openModal(this)"><img alt=""
                         src="public/img/portfolio/test.webp"></div>
@@ -153,165 +178,63 @@
                         src="public/img/portfolio/test.webp"></div>
                 <div class="grid-item item20" onclick="openModal(this)"><img alt=""
                         src="public/img/portfolio/test.webp"></div> -->
+                </div>
             </div>
         </div>
     </main>
     <style>
-        .footer {
-            background: rgba(0, 0, 0);
-
-            color: #8a8a8a;
-            font-size: 14px;
-            padding: 60px 0 20px;
-        }
-
-        .footer p {
-            color: #8a8a8a;
-        }
-
-        .footer h1,
-        .footer h2,
-        .footer h3,
-        .footer h4,
-        .footer h5,
-        .footer h6 {
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .footer a {
-            color: #8a8a8a;
-        }
-
-        .footer a:hover {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .footer .footer-content .footer-section {
-            flex: 1;
-            padding: 25px;
-        }
-
-        .footer .footer-content .about h1 span {
-            color: #214677;
-        }
-
-        .footer .footer-content .about .contact span {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        .footer .footer-content .about .socials a {
+        .social a {
             background: #fff;
             display: inline-block;
-            height: 40px;
-            width: 40px;
+            height: 56px;
+            width: 56px;
             margin: 0 10px 10px 0;
-            line-height: 40px;
-            text-align: center;
+            line-height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
             transition: .3s;
         }
 
-        .footer .footer-content .about .socials a:hover {
-            background: #214677;
+        .social a i:hover {
+            transform: scale(1.1)
+        }
+
+        .social a:hover {
+            background: #3981a6;
             color: #fff;
+
         }
 
-        .footer .footer-content .links ul a {
-            display: block;
-            margin-bottom: 10px;
-            transition: .3s;
-        }
+        @media screen and (max-width: 880px) {}
 
-        .footer .footer-content .links ul a:hover {
-            color: #214677;
-        }
+        @media screen and (max-width: 880px) {}
 
-        .footer .footer-content .contact-form .text-input {
-            background: rgba(255, 255, 255, 0.1);
-            border: 0;
-            color: #8a8a8a;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-
-        .footer .footer-content .footer-section .contact-form .btn {
-            background: #214677;
-            color: #000000;
-            border: 0;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .footer .footer-bottom {
-            background: rgba(0, 0, 0, 0.5);
-            color: #000000;
-            font-size: 14px;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .footer .footer-bottom a {
-            color: #e8491d;
-        }
-
-        .footer .footer-bottom a:hover {
-            color: #020202;
-        }
-
-        @media screen and (max-width: 880px) {
-            .footer .footer-content .footer-section {
-                padding: 10px;
-            }
-        }
-
-        @media screen and (max-width: 880px) {
-            .footer {
-                padding: 20px 0;
-            }
-        }
-
-        @media screen and (max-width: 680px) {
-            .footer .footer-content {
-                flex-direction: column;
+        @media screen and (max-width: 480px) {
+            .socials {
+                margin-left: 10px;
+                align-items: center;
             }
         }
     </style>
     <footer>
-
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <!-- gif -->
-
-                    <!--  <h1 class="logo-text"><span>Giulia</span>Garofalo</h1> -->
-                    <!-- <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.
-                            </p> -->
-                </div>
-                <div class="footer-section about links">
-
-                    <img src="public/img/Devil bianco.png" alt="logo" width="128px" height="128px"
-                        style="margin-left: 10rem; margin-bottom: 3.5rem;">
-
-                    <div class="contact" style="margin-left: 7rem; margin-bottom:1rem;">
-
-                        <span><i class="fas fa-envelope"></i> &nbsp; giuliagarofalo988@gmail.com</span>
+        <div
+            style="display: flex; justify-content:center; align-items:center; background-color: #020202; width:100%; padding:3rem ">
+            <div></div>
+            <div>
+                <div>
+                    <div style="display: flex; justify-content:center; align-items:center;">
+                        <img src=" public/img/Devil bianco.png" alt="logo" width="128px" height="128px"
+                            style="margin-bottom: 3rem;">
+                    </div>
+                    <div>
+                        <span style="color:#8a8a8a; font-size: 1rem"><i class=" fas fa-envelope"></i>
+                            giuliagarofalo988@gmail.com
+                        </span>
                     </div>
                     <br>
-                    <div class="socials" style="margin-left: 9.5rem; ">
-
+                    <div class="social" style="display: flex; justify-content:center; align-items:center;">
                         <a href="https://www.behance.net/giulja?tracking_source=search_projects%7Cgiulja"
                             target="_blank"><i class="fab fa-behance"></i></a>
                         <a href="https://www.instagram.com/iglulia/" target="_blank"><i
@@ -319,45 +242,9 @@
                         <a href="https://www.linkedin.com/in/iglulia/" target="_blank"><i
                                 class="fab fa-linkedin"></i></a>
                     </div>
-                    <!-- <h2>Quick Links</h2>
-                            <br>
-                            <ul>
-                                <a href="#">
-                                    <li>Events</li>
-                                </a>
-                                <a href="#">
-                                    <li>Team</li>
-                                </a>
-                                <a href="#">
-                                    <li>Mentores</li>
-                                </a>
-                                <a href="#">
-                                    <li>Gallery</li>
-                                </a>
-                                <a href="#">
-                                    <li>Terms and Conditions</li>
-                                </a>
-                            </ul> -->
-                </div>
-                <div class="footer-section contact-form">
-                    <!-- <h2>Contact Me</h2>
-                        <br>
-                        <form action="index.html" method="post">
-                            <input type="email" name="email" class="text-input contact-input"
-                                placeholder="Your email address...">
-                            <textarea rows="4" name="message" class="text-input contact-input"
-                                placeholder="Your message..."></textarea>
-                            <button type="submit"
-                                style="background-color: #214677; color: #fff; border: 0; padding: 12px 20px; margin-bottom: 10px; cursor: pointer; width: 100%;">
-                                <i class="fas fa-envelope"></i>
-    
-                            </button>
-                        </form> -->
                 </div>
             </div>
-            <!--  <div class="footer-bottom">
-                        &copy; codingpoets.com | Designed by Giulia Garofalo
-                    </div> -->
+            <div></div>
         </div>
     </footer>
     <script>
@@ -379,8 +266,4 @@
     <script type="text/javascript" src="../public/javascript/navBar.js"></script>
 </body>
 
-<<<<<<< HEAD </html>
-    =======
-
 </html>
->>>>>>> 43d20a4ec45d91a9ac8e451c39d39138c25bb964

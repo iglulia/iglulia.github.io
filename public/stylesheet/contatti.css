@@ -16,23 +16,56 @@ main {
     padding-right: 1em;
 }
 
-.photo {
-    flex-basis: 50%;
-    text-align: right;
+.text h1 {
+    margin-bottom: 0.2em;
 }
+
+@media (max-width: 875px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        flex-basis: 100%;
+        padding-right: 0;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .text h3 {
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
+
+
 
 img {
     max-width: 100%;
     height: auto;
 }
 
+@media (max-width: 875px) {
+    .fototessera img {
+        width: 100%;
+        margin-left: 3.5rem;
+    }
+}
+
+
 h1 {
-    color: #5d83d3;
+    color: #3981a6;
     font-size: 3rem;
 }
 
 h3 {
-    color: rgb(31, 63, 134);
+    color: #3981a6;
     font-size: 2rem;
     margin-bottom: 1em;
 }
@@ -43,7 +76,7 @@ p {
 }
 
 .btn-send-mail {
-    background-color: #5d83d3;
+    background-color: #3981a6;
     border: none;
     border-radius: 5px;
     color: #ffff;
@@ -59,5 +92,5 @@ p {
 }
 
 .btn-send-mail:hover {
-    background-color: #4267B2;
+    background-color: #b28df0;
 }
