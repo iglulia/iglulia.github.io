@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    /* Aggiungi altri stili del corpo qui se necessario */
+}
+
 @font-face {
     font-family: 'Poppins';
     src: url('Poppins/Poppins-SemiBold.ttf') format('ttf'),
@@ -29,33 +33,20 @@ html {
     background-repeat: repeat;
 }
 
-body {
-    zoom: 0.90;
-    /*transform: scale(0.75);*/
-    /*transform-origin: top left;*/
-}
-
 .logo_top {
-    display: inline-flex;
-    position: relative;
-    left: 50%;
-    top: 1rem;
-    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
 }
 
 .logo_top_brand img {
-    display: inline-flex;
-    position: relative;
-    top: 1rem;
-    left: 2.5rem;
     width: 450px;
 }
 
 @media (max-width: 575px) {
     .logo_top_brand img {
-        left: 0;
-        margin-left: 0;
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -119,10 +110,4 @@ a.active {
     background: #555;
 }
 
-
-
-@media (max-width: 575px) {}
-
-@media (max-width: 875px) {}
-
-@media (min-width: 875px) {}
+/* Aggiungi altri media query se necessario */
