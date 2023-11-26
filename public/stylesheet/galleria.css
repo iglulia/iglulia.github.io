@@ -11,12 +11,18 @@ main {
 .grid-container {
     display: grid;
     margin-bottom: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* it will generate responsive columns based on available width */
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    /* Modifica questa riga per impostare il numero di colonne desiderato */
     grid-gap: 1.7em;
     margin-top: 5vh;
     perspective: 1000px;
     transform-style: preserve-3d;
+}
+
+.grid-item:nth-child(1),
+.grid-item:nth-child(2),
+.grid-item:nth-child(3) {
+    grid-row: 1 / span 1;
 }
 
 .grid-item img {
