@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+body {
+    zoom: 0.90;
+    /*transform: scale(0.75);*/
+    /*transform-origin: top left;*/
+}
+
 @font-face {
     font-family: 'Poppins';
     src: url('Poppins/Poppins-SemiBold.ttf') format('ttf'),
