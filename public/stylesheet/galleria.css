@@ -12,7 +12,6 @@ main {
     display: grid;
     margin-bottom: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* it will generate responsive columns based on available width */
     grid-gap: 1.7em;
     margin-top: 5vh;
     perspective: 1000px;
