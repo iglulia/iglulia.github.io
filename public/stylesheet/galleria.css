@@ -7,7 +7,6 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
-
 .grid-container {
     display: grid;
     margin-bottom: 20px;
