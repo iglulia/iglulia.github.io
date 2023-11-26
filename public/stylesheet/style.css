@@ -13,7 +13,6 @@ body {
     font-family: 'Poppins';
     src: url('Poppins/Poppins-SemiBold.ttf') format('ttf'),
         url('Poppins/Poppins-SemiBoldItalic.ttf') format('ttf');
-    /* Aggiungi altre varianti del font se necessario */
     font-weight: normal;
     font-style: normal;
 }
@@ -109,5 +108,3 @@ a.active {
 ::-webkit-scrollbar-thumb:active {
     background: #555;
 }
-
-/* Aggiungi altri media query se necessario */
